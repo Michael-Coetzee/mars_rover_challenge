@@ -71,7 +71,7 @@ if __name__ == '__main__':
     3. choose amount of rovers to deploy
     """
     auto = input('manual override or auto? Enter (A | auto) or (M | manual)\n')
-    if auto in ['A', 'auto']:
+    if auto or auto.upper() in ['A', 'auto']:
         file = input('Select file name(make sure file is in this directory):')
         if os.path.exists(file):
             intersection = set([])
@@ -136,6 +136,11 @@ if __name__ == '__main__':
             else:
                 print('2 or more of your rovers share the same spot, please try again')
                 exit()
-    # print results
-    for x, y, z in results:
-        print(x, y, z)
+        # print results
+        for x, y, z in results:
+            print(x, y, z)
+    else:
+        print('Are you sure you typed the correct choice? Enter (A | auto) or (M | manual)')
+        exit()
+
+
