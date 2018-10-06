@@ -30,5 +30,6 @@ python mars_rovers.py
 2. ~~manually add the rovers and instructions~~
 3. ~~choose amount of rovers to deploy~~
 4. grid to visualise rovers
+5. warning messages to be more dynamic, will be able to pinpoint which rover failed
 
 
