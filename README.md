@@ -68,7 +68,7 @@ Expected Output:
 12. will run over telnet or ssh session
 
 
-## installation basic version  
+## installation:basic version  
 ```
 git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git  
 
@@ -84,5 +84,17 @@ python mars_rovers.py
 3. ~~choose amount of rovers to deploy~~
 4. grid/ui to visualise rovers
 5. warning messages to be more dynamic, will be able to pinpoint which rover failed
+
+## installation:enhanced version  
+```
+# if not cloned aleady
+git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git  
+
+cd mars_rover_challenge/enhanced 
+
+python mars_rovers_auto.py  
+
+```
+
 
 
