@@ -21,3 +21,26 @@ class Rover:
         """
         self.bearing = orient[(orient.index(self.bearing) + 1) % len(orient)]
 
+    def tleft(self):
+        """
+        turning left method 
+        """
+        self.bearing = orient[(orient.index(self.bearing) - 1) % len(orient)]
+
+    def move(self):
+        """
+        moving forward 1 grid point method 
+        """
+        xmod = self.x + move[self.bearing][0]
+        ymod = self.y + move[self.bearing][1]
+
+        if (xmod, ymod) not in self.intersection:
+            if xmod <= self.xmax and xmod >= 0:
+                self.x = xmod
+            if ymod <= self.ymax and ymod >= 0:
+                self.y = ymod
+            else:
+                print('Out of bounds try again!!')
+                exit()
+
+
