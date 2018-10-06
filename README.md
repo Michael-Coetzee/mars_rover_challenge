@@ -14,11 +14,11 @@ assumption 11: rovers cannot be deployed to the same coordinates
 
 # installation basic version  
 '''
-git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git
+git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git  
 
-cd mars_rover_challenge/basic
+cd mars_rover_challenge/basic  
 
-python mars_rovers.py
+python mars_rovers.py  
 
 '''
 
