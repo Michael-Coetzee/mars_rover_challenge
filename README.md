@@ -25,8 +25,9 @@ python mars_rovers.py
 ```
 
 # future improvements
-1. add auto manual functionality, auto: run a input instructions file
-2. manually add the rovers and instructions
-3. choose amount of rovers to deploy
+1. ~~add auto functionality - run a input instructions file, will pick up on rover amount~~
+2. ~~manually add the rovers and instructions~~
+3. ~~choose amount of rovers to deploy~~
+4. grid to visualise rovers
 
 
