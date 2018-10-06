@@ -1,4 +1,4 @@
-# mars_rover_challenge
+# mars rover challenge
 assumption 01: first input = grid size  
 assumption 02: second input = position of n rover on grid  
 assumption 03: third input = command given to rovers  
@@ -12,7 +12,14 @@ assumption 10: rovers cannot share the same coordinates after running command
 assumption 11: rovers cannot be deployed to the same coordinates  
 
 
-INSTALLATION:  
-git clone 
+# installation basic version  
+'''
+git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git
+
+cd mars_rover_challenge/basic
+
+python mars_rovers.py
+
+'''
 
 
