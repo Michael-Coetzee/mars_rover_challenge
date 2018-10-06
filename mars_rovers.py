@@ -1,5 +1,15 @@
 #!/usr/bin/python3
 
+## initialise global variables
+#amount of rovers that landed
+rover_count = 2
+#orientation list
+orient = ['N', 'E', 'S', 'W']
+#movement of rovers, 1 grid point
+move = {'N': (0, 1), 'E': (1, 0), 'S': (0, -1), 'W': (-1, 0)}
+#commands sent to rovers
+instructions = {'L': 'tleft', 'R': 'tright', 'M': 'move'}
+
 class Rover:
     """
     calculate and return position of rovers based on input paramters
@@ -13,7 +23,7 @@ class Rover:
         self.xmax = xmax
         self.ymax = ymax
         self.bearing = bearing
-        self.intersection = intsersection
+        self.intersection = set(intersection)
 
     def tright(self):
         """
