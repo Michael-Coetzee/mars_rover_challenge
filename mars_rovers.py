@@ -3,20 +3,23 @@
 ## initialise global variables
 #amount of rovers that landed
 rover_count = 2
-#orientation list
+#orientation list 
 orient = ['N', 'E', 'S', 'W']
-#movement of rovers, 1 grid point
+#movement of rovers, 1 grid point 
 move = {'N': (0, 1), 'E': (1, 0), 'S': (0, -1), 'W': (-1, 0)}
 #commands sent to rovers
 instructions = {'L': 'tleft', 'R': 'tright', 'M': 'move'}
 
+
 class Rover:
     """
     calculate and return position of rovers based on input paramters
+
     """
     def __init__(self, x, y, xmax, ymax, bearing, intersection):
-        """
+        """ 
         initialise parameters
+
         """
         self.x = x
         self.y = y
@@ -43,7 +46,7 @@ class Rover:
         """
         xmod = self.x + move[self.bearing][0]
         ymod = self.y + move[self.bearing][1]
-
+        #check intersection to see if nrover is not the same position as mrover 
         if (xmod, ymod) not in self.intersection:
             if xmod <= self.xmax and xmod >= 0:
                 self.x = xmod
@@ -52,27 +55,46 @@ class Rover:
             else:
                 print('Out of bounds try again!!')
                 exit()
+        else:
+            print('rovers cannot occupy the same spot, try again!!')
+            exit()
+
 
 if __name__ == '__main__':
+    """
+    future improvements
+    1. add auto manual functionality, auto: run a input instructions file
+    2. choose amount of rovers to deploy
+    """
+    # get grid size from input
     xmax, ymax = map(int, input('grid:').split())
-    intersection = set([])
+    # initialise intersection rovers soon to be positions
+    intersection = set([]) 
     results = []
+    # count_a for rover_count for loop
     count_a = 1
+    # count_b for instructions for loop
     count_b = 1
+    # iterate over rover count
     for _ in range(rover_count):
+        # get rover coordinates and NESW bearing
         x, y, bearing = input('coordinates for rover %d:' % count_a).split()
         count_a += 1
+        # run class with parameters - store in rover
         rover = Rover(int(x), int(y), xmax, ymax, bearing, intersection)
+        # iterate over instructions string
         for i in input('instructions for rover %d:' % count_b):
             if i not in 'MRL':
+                # exit if not valid instruction
                 print('invalid instruction "%s": use M or R or L - please try again' % i)
                 exit()
             else:
+                # store and run instructions
                 getattr(rover, instructions[i])()
         count_b += 1
+        # add nrovers coords to intersection
         intersection.add((rover.x, rover.y))
         results.append((rover.x, rover.y, rover.bearing))
-
+    # print results
     for x, y, z in results:
         print(x, y, z)
-
