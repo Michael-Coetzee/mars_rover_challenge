@@ -43,4 +43,26 @@ class Rover:
                 print('Out of bounds try again!!')
                 exit()
 
+if __name__ == '__main__':
+    xmax, ymax = map(int, input('grid:').split())
+    intersection = set([])
+    results = []
+    count_a = 1
+    count_b = 1
+    for _ in range(rover_count):
+        x, y, bearing = input('coordinates for rover %d:' % count_a).split()
+        count_a += 1
+        rover = Rover(int(x), int(y), xmax, ymax, bearing, intersection)
+        for i in input('instructions for rover %d:' % count_b):
+            if i not in 'MRL':
+                print('invalid instruction "%s": use M or R or L - please try again' % i)
+                exit()
+            else:
+                getattr(rover, instructions[i])()
+        count_b += 1
+        intersection.add((rover.x, rover.y))
+        results.append((rover.x, rover.y, rover.bearing))
+
+    for x, y, z in results:
+        print(x, y, z)
 
