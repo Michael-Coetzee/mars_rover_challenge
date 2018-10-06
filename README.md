@@ -1,17 +1,17 @@
 # mars rover challenge
 
 ## assumptions:
-assumpt1: first input = grid size  
-1. second input = position of n rover on grid  
-2. third input = command given to rovers  
-3. more than one rover can be deployed  
-4. first input is hard coded  
-5. even input will iterate between each rover deployed  
-6. odd input will iterate between each instruction given to the rover  
-7. rovers cannot exceed the grid size coordinates   
-8. rovers need to take turns between commands, cannot run concurrently  
-9. rovers cannot share the same coordinates after running command  
-10. rovers cannot be deployed to the same coordinates  
+1. first input = grid size  
+2. second input = position of n rover on grid  
+3. third input = command given to rovers  
+4. more than one rover can be deployed  
+5. first input is hard coded  
+6. even input will iterate between each rover deployed  
+7. odd input will iterate between each instruction given to the rover  
+8. rovers cannot exceed the grid size coordinates   
+9. rovers need to take turns between commands, cannot run concurrently  
+10. rovers cannot share the same coordinates after running command  
+11. rovers cannot be deployed to the same coordinates  
 
 
 # installation basic version  
