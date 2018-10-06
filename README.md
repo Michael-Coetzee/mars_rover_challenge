@@ -12,6 +12,7 @@
 9. rovers need to take turns between commands, cannot run concurrently  
 10. rovers cannot share the same coordinates after running command  
 11. rovers cannot be deployed to the same coordinates  
+12. will run over telnet or ssh session
 
 
 # installation basic version  
