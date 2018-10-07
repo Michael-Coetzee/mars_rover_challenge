@@ -74,7 +74,26 @@ git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git
 
 cd mars_rover_challenge/basic  
 
-python mars_rovers.py  
+python mars_rovers.py
+
+Test Input:
+
+5 5
+
+1 2 N
+
+LMLMLMLMM
+
+3 3 E
+
+MMRMMRMRRM
+
+Expected Output:
+
+1 3 N
+
+5 1 E
+
 
 ```
 
@@ -92,7 +111,33 @@ git clone https://github.com/Michael-Coetzee/mars_rover_challenge.git
 
 cd mars_rover_challenge/enhanced 
 
-python mars_rovers_auto.py  
+python mars_rovers_auto.py
+
+Test Input Manual:
+
+2
+
+5 5
+
+1 2 N
+
+LMLMLMLMM
+
+3 3 E
+
+MMRMMRMRRM
+
+Expected Output:
+
+1 3 N
+
+5 1 E
+
+Test Input Auto:
+
+when prompt, type file name 
+example filename input.txt, input2.txt, input3.txt, input4.txt, input5.txt, input6.txt
+
 
 ```
 
